@@ -157,6 +157,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     {
         // 添加app登录身份认证的provider
         auth.authenticationProvider(getAppLoginProvider());
+        
         // 默认的身份认证
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
     }
